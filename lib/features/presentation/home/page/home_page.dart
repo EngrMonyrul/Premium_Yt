@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
       ..setNavigationDelegate(NavigationDelegate(
         /* <<--------->> navigation request <<---------->> */
         onNavigationRequest: (request) {
+          print("Url Navigating");
           if (request.url == "https://m.youtube.com/") {
             return NavigationDecision.navigate;
           } else {
@@ -43,6 +44,7 @@ class _HomePageState extends State<HomePage> {
 
         /* <<--------->> url change <<---------->> */
         onUrlChange: (change) {
+          print("Url Changing");
           homeProvider.setFileUrl(url: change.url!);
           if (change.url != "" && change.url!.contains("watch")) {
             showVideoOptions();
@@ -243,8 +245,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 )
-              : const SizedBox(),
-          floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+              : null,
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:tubebuddy_3/core/enums/media_options.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class HomeProvider extends ChangeNotifier {
   /*<<----------->> variables <<----------->>*/

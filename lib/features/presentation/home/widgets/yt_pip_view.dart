@@ -1,4 +1,3 @@
-import 'package:fl_pip/fl_pip.dart';
 import 'package:flutter/material.dart';
 import 'package:pip_view/pip_view.dart';
 
